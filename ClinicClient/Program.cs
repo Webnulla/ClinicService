@@ -61,12 +61,12 @@ namespace ClinicClient
             
             if (createPetResponse.ErrCode == 0)
             {
-                Console.WriteLine($"Client #{createPetResponse.PetId} created successfully.");
+                Console.WriteLine($"Pet #{createPetResponse.PetId} created successfully.");
             }
             else
             {
                 Console.WriteLine(
-                    $"Create client error.\nErrorCode: {createPetResponse.ErrCode}\nErrorMessage: {createPetResponse.ErrMessage}");
+                    $"Create pet error.\nErrorCode: {createPetResponse.ErrCode}\nErrorMessage: {createPetResponse.ErrMessage}");
             }
                         
             var getPetResponse = petServiceClient.GetPets(new GetPetsRequest());
