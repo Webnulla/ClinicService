@@ -4,10 +4,12 @@ namespace ClinicService.Data;
 
 public class ClinicServiceDbContext : DbContext
 {
-    public DbSet<Client> Clients { get; set; }
-    public DbSet<Pet> Pets { get; set; }
-    public DbSet<Consultation> Consultations { get; set; }
-    
+    public virtual DbSet<Client> Clients { get; set; }
+    public virtual DbSet<Pet> Pets { get; set; }
+    public virtual DbSet<Consultation> Consultations { get; set; }
+    public DbSet<Account> Accounts { get; set; }
+    public DbSet<AccountSession> AccountSessions { get; set; }
+
     //переопределяем метод, чтобы бд смогла сделать миграцию и апдейт без ошибок
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
