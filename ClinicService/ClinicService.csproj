@@ -16,7 +16,9 @@
           <PrivateAssets>all</PrivateAssets>
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
+        <PackageReference Include="NLog.Web.AspNetCore" Version="5.1.5" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.25.0" />
     </ItemGroup>
 
     <ItemGroup>
@@ -28,6 +30,10 @@
       <Protobuf Include="Proto\Clinic.proto" GrpcServices="Server" />
       <None Remove="Proto\Pet.proto" />
       <Protobuf Include="Proto\Pet.proto" GrpcServices="Server" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Controllers\" />
     </ItemGroup>
 
 </Project>
