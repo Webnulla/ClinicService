@@ -32,8 +32,4 @@
       <Protobuf Include="Proto\Pet.proto" GrpcServices="Server" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Controllers\" />
-    </ItemGroup>
-
 </Project>
